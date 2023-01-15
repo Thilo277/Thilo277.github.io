@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+}
+
+#ecologo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+#button {
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: lightgreen;
+    border-color: grey;
+    border: 3px outset;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}

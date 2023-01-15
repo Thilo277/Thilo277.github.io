@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="mtitle">Hauptmenü - Ecochart - Einfaches Gefahrentabellen Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="pics/icon.ico">
+</head>
+
+
+
+<body>
+
+  <h1>Willkommen!</h1>
+  <div id="customerlogo"></div>
+  <img id="ecologo" src="pics/ecoproteclogo.png">
+
+  <br>
+  <br>
+  <br>
+  <label for="customerselector">Bitte Firma auswählen:</label>
+
+  <select name="customer" id="customerselector">
+    <optgroup label="Gruppierung 1">
+      <option value="firma1">Firma1</option>
+      <option value="firma2">Firma2</option>
+    </optgroup>
+    <optgroup label="Gruppierung 2">
+      <option value="firma3">Firma3</option>
+      <option value="firma4">Firma4</option>
+    </optgroup>
+  </select>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a onclick="start()" id="button" href="main.html">Start</a>
+
+</body>
+<script src="index.js"></script>
+
+</html>
+
+
+
+<!-- 
+  <button id="button" onclick="testfunction()">drück mich</button>
+  <div id="test">
+    
+  </div>
+
+  <img id="image" width="100" height="100" />
+  <input id="fileinput" type="file" onchange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])">
+
+ -->

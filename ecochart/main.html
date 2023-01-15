@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="mtitle"></title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="pics/icon.ico">
+</head>
+<script src="index.js"></script>
+
+
+
+<body onload="load()" id="hbody">
+  <h1 id="starting">Startet...</h1>
+
+  <div id="customerlogo"></div>
+  <div id="btns">
+    <button onclick="zuruck()">Zurück</button><button onclick="hidebuttons()">Knöpfe ausblenden und Exportieren</button>
+    <br>
+    <br>
+    <br>
+    <button onclick="addrow1(0)">Text1</button><button onclick="addrow1(2)">Text2</button><button
+      onclick="addrow1(3)">Text3</button><button onclick="addrow1(4)">Text4</button>
+  </div>
+  <table id="tbody">
+    <tr id="head">
+      <th>Nr.</th>
+      <th>Mängel Festgestellt am</th>
+      <th>Gefärdung</th>
+      <th>Zuständigkeit</th>
+      <th>Status</th>
+      <th>Priorität</th>
+      <th>Bemerkung/Maßnahme</th>
+      <th>Fundstelle/Foto</th>
+      <th>Zu erledigen bis</th>
+      <th>Abgeschlossen am/durch</th>
+    </tr>
+    <tr>
+      <td colspan="10" id="allgemein">1 Allgemein</td>
+    </tr>
+  </table>
+
+</body>
+
+
+</html>
+
+
+<!-- 
+  <button id="button" onclick="testfunction()">drück mich</button>
+  <div id="test">
+    
+  </div>
+
+  <img id="image"/><input id="fileinput" type="file" onchange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])">
+
+ -->

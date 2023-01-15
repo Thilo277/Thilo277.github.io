@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table, td, th {
+    border: 1px solid;
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+#head
+{
+    font-size: 10px;
+}
+
+
+#allgemein
+{
+    background-color: lightgray;
+    font-size: 10px;
+}
+
+th
+{
+    background-color: lightseagreen;
+}
