@@ -3,7 +3,6 @@
 const firmen = ["Firma1", "Firma2", "Firma3", "Firma4"]; // Customers Array
 const text = ["Text1", "Text2", "Text3", "Text4", "Text5", "Text6", "Text7", "Text8", "Text9"]; // First Text array
 const text2 = ["Text1-2", "Text2-2", "Text3-2", "Text4-2", "Text5-2", "Text6-2", "Text7-2", "Text8-2", "Text9-2"]; // Second Text array
-var num = 1.0; // Number
 const buttons = '<button onclick="addrow1(0)">Text1</button><button onclick="addrow1(2)">Text2</button><button onclick="addrow1(3)">Text3</button><button onclick="addrow1(4)">Text4</button>'; // edit the buttons here, make sure to also do so in main.html!
 
 // -------------------------------- start of actual code --------------------------------
@@ -11,6 +10,9 @@ const buttons = '<button onclick="addrow1(0)">Text1</button><button onclick="add
 /* var selected; */ // not needed anymore because the selected customer gets stored in localStorage from local function variable, to prevent resetting variable when loading main.html
 var back = 0; // Back button, warn-variable in case of misclick
 var hide = 0; // Hide/Export button, warn-variable in case of misclick
+var numcat = 0; // Number for cat
+var numrow = 0.00; // Number for row
+
 
 
 function start() {
@@ -20,6 +22,7 @@ function start() {
 }
 
 function addrow1(number) {
+    var num = numcat + numrow; // calculate number
     tbody.innerHTML += `
     <td>${num.toFixed(2)}</td>
     <td><input type="date"></td>
@@ -32,7 +35,8 @@ function addrow1(number) {
     <td><input type="month"></td>
     <td><input type="date"><input type="text"></td>
     `; // add row to table
-    num = num + 0.01; // count number up
+    numrow = numrow + 0.01; // count number up
+    
 }
 
 function makered(id) {
@@ -74,6 +78,7 @@ function load() {
             mtitle.innerHTML = 'Error code= -10'; // in case of lokal run
         }
         else {
+            newcat();
             console.log('Started, have fun'); // in case of successful run
         }
     }, 1000);
@@ -118,9 +123,9 @@ function addbuttons() {
 
 function newcat()
 {
-    parseInt(num, 10);
-    num = num + 1;
-    tbody.innerHTML += '<td colspan="10" class="category"><input type="text" class="categoryinput" value="'+ num +' "></td>';
+    numcat = numcat + 1;
+    numrow = 0;
+    tbody.innerHTML += '<td colspan="10" class="category"><input type="text" class="categoryinput" value="'+ numcat +' "></td>';
 }
 
 
