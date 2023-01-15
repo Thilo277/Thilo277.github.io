@@ -1,4 +1,4 @@
-/* var selected; */ // not needed anymore because the selected customer gets stored in localStorage, to prevent resetting variable when loading main.html
+/* var selected; */ // not needed anymore because the selected customer gets stored in localStorage from local function variable, to prevent resetting variable when loading main.html
 var back = 0; // Back button, warn-variable in case of misclick
 var hide = 0; // Hide/Export button, warn-variable in case of misclick
 const firmen = ["Firma1", "Firma2", "Firma3", "Firma4"]; // Customers Array
