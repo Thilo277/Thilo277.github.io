@@ -19,10 +19,17 @@ table {
 }
 
 
-#allgemein
+.category
 {
     background-color: lightgray;
     font-size: 10px;
+}
+
+.categoryinput
+{
+    background-color: lightgray;
+    font-size: 10px;
+    border: 0px;
 }
 
 th
