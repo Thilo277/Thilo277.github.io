@@ -32,6 +32,13 @@ table {
     border: 0px;
 }
 
+.numberinput
+{
+    background-color: white;
+    font-size: 10px;
+    border: 0px;
+}
+
 th
 {
     background-color: lightseagreen;

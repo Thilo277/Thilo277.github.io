@@ -11,7 +11,7 @@ const buttons = '<button onclick="addrow1(0)">Text1</button><button onclick="add
 var back = 0; // Back button, warn-variable in case of misclick
 var hide = 0; // Hide/Export button, warn-variable in case of misclick
 var numcat = 0; // Number for cat
-var numrow = 0.00; // Number for row
+var numrow = 0.01; // Number for row
 
 
 
@@ -24,7 +24,8 @@ function start() {
 function addrow1(number) {
     var num = numcat + numrow; // calculate number
     tbody.innerHTML += `
-    <td>${num.toFixed(2)}</td>
+    <tr id="btnr${num.toFixed(2)}">
+    <td><input type="text" class="numberinput" value="${num.toFixed(2)}" size="4"></td>
     <td><input type="date"></td>
     <td><textarea>${text[number]}</textarea></td>
     <td><input type="text"></td>
@@ -33,11 +34,17 @@ function addrow1(number) {
     <td><textarea>${text2[number]}</textarea></td>
     <td><img id="image${num.toFixed(2)}" width="100%"><input id="fileinput" type="file" onchange="document.getElementById('image${num.toFixed(2)}').src = window.URL.createObjectURL(this.files[0])"></td>
     <td><input type="month"></td>
-    <td><input type="date"><input type="text"></td>
+    <td><input type="date"><input type="text"><button onclick="removerow(${num.toFixed(2)})"></button></td>
+    </tr>
     `; // add row to table
     numrow = numrow + 0.01; // count number up
     
 }
+
+function removerow(row) {
+    document.getElementById('btnr'+row).innerHTML = '';
+}
+
 
 function makered(id) {
     document.getElementById(id).style.backgroundColor = "red"; // function to make Priorität red
@@ -124,7 +131,7 @@ function addbuttons() {
 function newcat()
 {
     numcat = numcat + 1;
-    numrow = 0;
+    numrow = 0.01;
     tbody.innerHTML += '<td colspan="10" class="category"><input type="text" class="categoryinput" value="'+ numcat +' "></td>';
 }
 
