@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Schiffe Versenken</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="head"></td>
+            <td class="head">1</td>
+            <td class="head">2</td>
+            <td class="head">3</td>
+            <td class="head">4</td>
+            <td class="head">5</td>
+            <td class="head">6</td>
+            <td class="head">7</td>
+            <td class="head">8</td>
+        </tr>
+        <tr>
+            <td class="head">A</td>
+            <td id="A1"><input type="button" onclick="scolorchange('A1')"></td>
+            <td id="A2"><input type="button" onclick="scolorchange('A2')"></td>
+            <td id="A3"><input type="button" onclick="scolorchange('A3')"></td>
+            <td id="A4"><input type="button" onclick="scolorchange('A4')"></td>
+            <td id="A5"><input type="button" onclick="scolorchange('A5')"></td>
+            <td id="A6"><input type="button" onclick="scolorchange('A6')"></td>
+            <td id="A7"><input type="button" onclick="scolorchange('A7')"></td>
+            <td id="A8"><input type="button" onclick="scolorchange('A8')"></td>
+        </tr>
+        <tr>
+            <td class="head">B</td>
+            <td id="B1"><input type="button" onclick="scolorchange('B1')"></td>
+            <td id="B2"><input type="button" onclick="scolorchange('B2')"></td>
+            <td id="B3"><input type="button" onclick="scolorchange('B3')"></td>
+            <td id="B4"><input type="button" onclick="scolorchange('B4')"></td>
+            <td id="B5"><input type="button" onclick="scolorchange('B5')"></td>
+            <td id="B6"><input type="button" onclick="scolorchange('B6')"></td>
+            <td id="B7"><input type="button" onclick="scolorchange('B7')"></td>
+            <td id="B8"><input type="button" onclick="scolorchange('B8')"></td>
+        </tr>
+        <tr>
+            <td class="head">C</td>
+            <td id="C1"><input type="button" onclick="scolorchange('C1')"></td>
+            <td id="C2"><input type="button" onclick="scolorchange('C2')"></td>
+            <td id="C3"><input type="button" onclick="scolorchange('C3')"></td>
+            <td id="C4"><input type="button" onclick="scolorchange('C4')"></td>
+            <td id="C5"><input type="button" onclick="scolorchange('C5')"></td>
+            <td id="C6"><input type="button" onclick="scolorchange('C6')"></td>
+            <td id="C7"><input type="button" onclick="scolorchange('C7')"></td>
+            <td id="C8"><input type="button" onclick="scolorchange('C8')"></td>
+        </tr>
+        <tr>
+            <td class="head">D</td>
+            <td id="D1"><input type="button" onclick="scolorchange('D1')"></td>
+            <td id="D2"><input type="button" onclick="scolorchange('D2')"></td>
+            <td id="D3"><input type="button" onclick="scolorchange('D3')"></td>
+            <td id="D4"><input type="button" onclick="scolorchange('D4')"></td>
+            <td id="D5"><input type="button" onclick="scolorchange('D5')"></td>
+            <td id="D6"><input type="button" onclick="scolorchange('D6')"></td>
+            <td id="D7"><input type="button" onclick="scolorchange('D7')"></td>
+            <td id="D8"><input type="button" onclick="scolorchange('D8')"></td>
+        </tr>
+        <tr>
+            <td class="head">E</td>
+            <td id="E1"><input type="button" onclick="scolorchange('E1')"></td>
+            <td id="E2"><input type="button" onclick="scolorchange('E2')"></td>
+            <td id="E3"><input type="button" onclick="scolorchange('E3')"></td>
+            <td id="E4"><input type="button" onclick="scolorchange('E4')"></td>
+            <td id="E5"><input type="button" onclick="scolorchange('E5')"></td>
+            <td id="E6"><input type="button" onclick="scolorchange('E6')"></td>
+            <td id="E7"><input type="button" onclick="scolorchange('E7')"></td>
+            <td id="E8"><input type="button" onclick="scolorchange('E8')"></td>
+        </tr>
+        <tr>
+            <td class="head">F</td>
+            <td id="F1"><input type="button" onclick="scolorchange('F1')"></td>
+            <td id="F2"><input type="button" onclick="scolorchange('F2')"></td>
+            <td id="F3"><input type="button" onclick="scolorchange('F3')"></td>
+            <td id="F4"><input type="button" onclick="scolorchange('F4')"></td>
+            <td id="F5"><input type="button" onclick="scolorchange('F5')"></td>
+            <td id="F6"><input type="button" onclick="scolorchange('F6')"></td>
+            <td id="F7"><input type="button" onclick="scolorchange('F7')"></td>
+            <td id="F8"><input type="button" onclick="scolorchange('F8')"></td>
+        </tr>
+        <tr>
+            <td class="head">G</td>
+            <td id="G1"><input type="button" onclick="scolorchange('G1')"></td>
+            <td id="G2"><input type="button" onclick="scolorchange('G2')"></td>
+            <td id="G3"><input type="button" onclick="scolorchange('G3')"></td>
+            <td id="G4"><input type="button" onclick="scolorchange('G4')"></td>
+            <td id="G5"><input type="button" onclick="scolorchange('G5')"></td>
+            <td id="G6"><input type="button" onclick="scolorchange('G6')"></td>
+            <td id="G7"><input type="button" onclick="scolorchange('G7')"></td>
+            <td id="G8"><input type="button" onclick="scolorchange('G8')"></td>
+        </tr>
+        <tr>
+            <td class="head">H</td>
+            <td id="H1"><input type="button" onclick="scolorchange('H1')"></td>
+            <td id="H2"><input type="button" onclick="scolorchange('H2')"></td>
+            <td id="H3"><input type="button" onclick="scolorchange('H3')"></td>
+            <td id="H4"><input type="button" onclick="scolorchange('H4')"></td>
+            <td id="H5"><input type="button" onclick="scolorchange('H5')"></td>
+            <td id="H6"><input type="button" onclick="scolorchange('H6')"></td>
+            <td id="H7"><input type="button" onclick="scolorchange('H7')"></td>
+            <td id="H8"><input type="button" onclick="scolorchange('H8')"></td>
+        </tr>
+    </table>
+    <br/>
+        <p><button onclick="start = 1;">Start!</button></p>
+    <br/>
+    <table>
+        <tr>
+            <td class="head"></td>
+            <td class="head">1</td>
+            <td class="head">2</td>
+            <td class="head">3</td>
+            <td class="head">4</td>
+            <td class="head">5</td>
+            <td class="head">6</td>
+            <td class="head">7</td>
+            <td class="head">8</td>
+        </tr>
+        <tr>
+            <td class="head">A</td>
+            <td id="GA1"><input type="button" onclick="colorchange('GA1')"></td>
+            <td id="GA2"><input type="button" onclick="colorchange('GA2')"></td>
+            <td id="GA3"><input type="button" onclick="colorchange('GA3')"></td>
+            <td id="GA4"><input type="button" onclick="colorchange('GA4')"></td>
+            <td id="GA5"><input type="button" onclick="colorchange('GA5')"></td>
+            <td id="GA6"><input type="button" onclick="colorchange('GA6')"></td>
+            <td id="GA7"><input type="button" onclick="colorchange('GA7')"></td>
+            <td id="GA8"><input type="button" onclick="colorchange('GA8')"></td>
+        </tr>
+        <tr>
+            <td class="head">B</td>
+            <td id="GB1"><input type="button" onclick="colorchange('GB1')"></td>
+            <td id="GB2"><input type="button" onclick="colorchange('GB2')"></td>
+            <td id="GB3"><input type="button" onclick="colorchange('GB3')"></td>
+            <td id="GB4"><input type="button" onclick="colorchange('GB4')"></td>
+            <td id="GB5"><input type="button" onclick="colorchange('GB5')"></td>
+            <td id="GB6"><input type="button" onclick="colorchange('GB6')"></td>
+            <td id="GB7"><input type="button" onclick="colorchange('GB7')"></td>
+            <td id="GB8"><input type="button" onclick="colorchange('GB8')"></td>
+        </tr>
+        <tr>
+            <td class="head">C</td>
+            <td id="GC1"><input type="button" onclick="colorchange('GC1')"></td>
+            <td id="GC2"><input type="button" onclick="colorchange('GC2')"></td>
+            <td id="GC3"><input type="button" onclick="colorchange('GC3')"></td>
+            <td id="GC4"><input type="button" onclick="colorchange('GC4')"></td>
+            <td id="GC5"><input type="button" onclick="colorchange('GC5')"></td>
+            <td id="GC6"><input type="button" onclick="colorchange('GC6')"></td>
+            <td id="GC7"><input type="button" onclick="colorchange('GC7')"></td>
+            <td id="GC8"><input type="button" onclick="colorchange('GC8')"></td>
+        </tr>
+        <tr>
+            <td class="head">D</td>
+            <td id="GD1"><input type="button" onclick="colorchange('GD1')"></td>
+            <td id="GD2"><input type="button" onclick="colorchange('GD2')"></td>
+            <td id="GD3"><input type="button" onclick="colorchange('GD3')"></td>
+            <td id="GD4"><input type="button" onclick="colorchange('GD4')"></td>
+            <td id="GD5"><input type="button" onclick="colorchange('GD5')"></td>
+            <td id="GD6"><input type="button" onclick="colorchange('GD6')"></td>
+            <td id="GD7"><input type="button" onclick="colorchange('GD7')"></td>
+            <td id="GD8"><input type="button" onclick="colorchange('GD8')"></td>
+        </tr>
+        <tr>
+            <td class="head">E</td>
+            <td id="GE1"><input type="button" onclick="colorchange('GE1')"></td>
+            <td id="GE2"><input type="button" onclick="colorchange('GE2')"></td>
+            <td id="GE3"><input type="button" onclick="colorchange('GE3')"></td>
+            <td id="GE4"><input type="button" onclick="colorchange('GE4')"></td>
+            <td id="GE5"><input type="button" onclick="colorchange('GE5')"></td>
+            <td id="GE6"><input type="button" onclick="colorchange('GE6')"></td>
+            <td id="GE7"><input type="button" onclick="colorchange('GE7')"></td>
+            <td id="GE8"><input type="button" onclick="colorchange('GE8')"></td>
+        </tr>
+        <tr>
+            <td class="head">F</td>
+            <td id="GF1"><input type="button" onclick="colorchange('GF1')"></td>
+            <td id="GF2"><input type="button" onclick="colorchange('GF2')"></td>
+            <td id="GF3"><input type="button" onclick="colorchange('GF3')"></td>
+            <td id="GF4"><input type="button" onclick="colorchange('GF4')"></td>
+            <td id="GF5"><input type="button" onclick="colorchange('GF5')"></td>
+            <td id="GF6"><input type="button" onclick="colorchange('GF6')"></td>
+            <td id="GF7"><input type="button" onclick="colorchange('GF7')"></td>
+            <td id="GF8"><input type="button" onclick="colorchange('GF8')"></td>
+        </tr>
+        <tr>
+            <td class="head">G</td>
+            <td id="GG1"><input type="button" onclick="colorchange('GG1')"></td>
+            <td id="GG2"><input type="button" onclick="colorchange('GG2')"></td>
+            <td id="GG3"><input type="button" onclick="colorchange('GG3')"></td>
+            <td id="GG4"><input type="button" onclick="colorchange('GG4')"></td>
+            <td id="GG5"><input type="button" onclick="colorchange('GG5')"></td>
+            <td id="GG6"><input type="button" onclick="colorchange('GG6')"></td>
+            <td id="GG7"><input type="button" onclick="colorchange('GG7')"></td>
+            <td id="GG8"><input type="button" onclick="colorchange('GG8')"></td>
+        </tr>
+        <tr>
+            <td class="head">H</td>
+            <td id="GH1"><input type="button" onclick="colorchange('GH1')"></td>
+            <td id="GH2"><input type="button" onclick="colorchange('GH2')"></td>
+            <td id="GH3"><input type="button" onclick="colorchange('GH3')"></td>
+            <td id="GH4"><input type="button" onclick="colorchange('GH4')"></td>
+            <td id="GH5"><input type="button" onclick="colorchange('GH5')"></td>
+            <td id="GH6"><input type="button" onclick="colorchange('GH6')"></td>
+            <td id="GH7"><input type="button" onclick="colorchange('GH7')"></td>
+            <td id="GH8"><input type="button" onclick="colorchange('GH8')"></td>
+        </tr>
+    </table>
+</body>
+</html>
