@@ -87,7 +87,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
      * Split so can be easily overridden
      */
     _getIconSVG() {
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 -960 960 960" width="100" style="transform: rotate(${this._heading}deg); fill: #000;stroke: #0ff; stroke-width: 75px;"><path d="M340-80v-60l80-60v-220L80-320v-80l340-200v-220q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v220l340 200v80L540-420v220l80 60v60l-140-40-140 40Z"/></svg>`
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 -960 960 960" width="100" style="fill: #000;stroke: #0ff; stroke-width: 75px;"><path d="M340-80v-60l80-60v-220L80-320v-80l340-200v-220q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v220l340 200v80L540-420v220l80 60v60l-140-40-140 40Z"/></svg>`
       return {
         className: "leaflet-control-locate-location",
         svg,
@@ -121,16 +121,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
       const r = options.radius;
       const w = options.width + options.weight;
       const h = (r + options.depth + options.weight) * 2;
-      const path = `M0,0 l${options.width / 2},${options.depth} l-${w},0 z`;
-      const svgstyle = `transform: rotate(${this._heading}deg)`;
-      const svg =
-        `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" version="1.1" viewBox="-${w / 2} 0 ${w} ${h}" style="${svgstyle}">` +
-        '<path d="' +
-        path +
-        '" style="' +
-        style +
-        '" />' +
-        "</svg>";
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 -960 960 960" width="100" style="transform: rotate(${this._heading}deg); fill: #000;stroke: #0ff; stroke-width: 75px;"><path d="M340-80v-60l80-60v-220L80-320v-80l340-200v-220q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v220l340 200v80L540-420v220l80 60v60l-140-40-140 40Z"/></svg>`
+
       return {
         className: "leaflet-control-locate-heading",
         svg,
