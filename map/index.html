@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <style>
         html,
         body {
@@ -46,17 +49,38 @@
 
         var map = L.map('map').setView([51.962, 7.754], 10);
 
-        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 12,
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
             minZoom: 7,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+        });
 
-        var tiles = L.tileLayer('https://nwy-tiles-api.prod.newaydata.com/tiles/{z}/{x}/{y}.png?path=latest/aero/latest', {
+        var dfs = L.tileLayer('https://secais.dfs.de/static-maps/icao500/tiles/{z}/{x}/{y}.png', {
+            maxZoom: 12,
+            minZoom: 7,
+            attribution: '<a target="_blank" href="http://openflightmaps.org">&copy; open flightmaps association</a>'
+        });
+
+        var ofm = L.tileLayer('https://nwy-tiles-api.prod.newaydata.com/tiles/{z}/{x}/{y}.png?path=latest/aero/latest', {
+            maxZoom: 12,
+            minZoom: 7,
+            attribution: '<a target="_blank" href="http://openflightmaps.org">&copy; open flightmaps association</a>'
+        });
+
+        var ofmbase = L.tileLayer('https://nwy-tiles-api.prod.newaydata.com/tiles/{z}/{x}/{y}.jpg?path=latest/base/latest', {
             maxZoom: 12,
             minZoom: 7,
             attribution: '<a target="_blank" href="http://openflightmaps.org">&copy; open flightmaps association</a>'
         }).addTo(map);
+
+        var baseLayers = {
+            "OpenStreetMap": osm,
+            "DFS ICAO Map" : dfs,
+            "OpenFlightMaps": ofm
+        };
+        var layerControl = L.control.layers(baseLayers).addTo(map);
+
+
     </script>
 </body>
 

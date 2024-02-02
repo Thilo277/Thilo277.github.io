@@ -1,16 +1,25 @@
 .leaflet-touch .leaflet-bar a {
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
 }
 
 .leaflet-control-locate a .leaflet-control-locate-location-arrow {
-    width: 32px;
-    height: 32px;
-    margin: 32px;
+  width: 32px;
+  height: 32px;
+  margin: 32px;
 }
 
-.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out
-{
+.leaflet-touch .leaflet-control-zoom-in,
+.leaflet-touch .leaflet-control-zoom-out {
   font-size: 70px;
+}
+
+.leaflet-touch .leaflet-control-layers-toggle {
+  width: 100px;
+  height: 100px;
+}
+
+circle {
+  fill: red;
 }
