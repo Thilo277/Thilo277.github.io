@@ -20,6 +20,8 @@
   height: 100px;
 }
 
-circle {
-  fill: red;
+.leaflet-control-layers label
+{
+  font-size: 13px;
+  font-size: 4.1em;
 }
