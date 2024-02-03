@@ -157,7 +157,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
        */
       setView: "untilPanOrZoom",
       /** Keep the current map zoom level when setting the view and only pan. */
-      keepCurrentZoomLevel: false,
+      keepCurrentZoomLevel: true,
       /** After activating the plugin by clicking on the icon, zoom to the selected zoom level, even when keepCurrentZoomLevel is true. Set to 'false' to disable this feature. */
       initialZoomLevel: false,
       /**
@@ -174,7 +174,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         return locationEvent.bounds;
       },
       /** Smooth pan and zoom to the location of the marker. Only works in Leaflet 1.0+. */
-      flyTo: false,
+      flyTo: true,
       /**
        * The user location can be inside and outside the current view when the user clicks on the
        * control that is already active. Both cases can be configures separately.
